@@ -1,7 +1,7 @@
 const asyncHandler = require("../middleware/asyncHandler");
 const User = require("../models/user");
 const mongoose = require("mongoose");
-const CustomError = require("../utils/errorObject");
+
 exports.findAll = asyncHandler(async (req, res, next) => {
   const data = await User.find();
   res.status(200).send({ success: true, data: data });
