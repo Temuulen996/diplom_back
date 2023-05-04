@@ -31,7 +31,9 @@ app.use("/api/user", UserRoute);
 //middleware
 
 app.get("/", async (req, res, next) => {
-  res.status(200).send({ port: process.env.PORT });
+  res
+    .status(200)
+    .send({ port: process.env.PORT, mongodb: process.env.MONGODB_URI });
 });
 //errorHandler
 app.use(errorHandler);
