@@ -24,10 +24,12 @@ connectDb();
 //Routes
 const ProductRoute = require("./routes/product.routes");
 const UserRoute = require("./routes/user.routes");
+const SessionRoute = require("./routes/session.routes");
 //Routes
 //middleware
 app.use("/api/product", ProductRoute);
 app.use("/api/user", UserRoute);
+app.use("/api/session", SessionRoute);
 //middleware
 
 app.get("/", async (req, res, next) => {
