@@ -18,7 +18,7 @@ exports.findByToken = asyncHandler(async (req, res, next) => {
 });
 exports.findByUserID = asyncHandler(async (req, res, next) => {
   const userID = req.params.id;
-  const data = await Session.find({   : userID });
+  const data = await Session.find({ userID  : userID });
   res.status(200).send({ success: true, data: data });
 });
 // exports.findByUserID = asyncHandler(async (req, res, next) => {
