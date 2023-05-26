@@ -29,6 +29,11 @@ exports.findByOwnerId = asyncHandler(async (req, res, next) => {
   console.log(ownerData);
   let data = await Product.find({ owner: ownewId });
   // data = { ...data, owner_name: ownerData.fname };
-  console.log(data);
+
   res.status(200).send({ success: true, data: data });
+});
+exports.deleteProductById = asyncHandler(async (req, res, next) => {
+  const id = req.params.id;
+  await Product.findByIdAndDelete(id);
+  res, status(200).send({ success: true });
 });
