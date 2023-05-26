@@ -8,7 +8,7 @@ const ProductSchema = mongoose.Schema({
     required: true,
   },
   image: { type: [String], required: true },
-  owner: { type: mongoose.Schema.ObjectId, required: true },
+  user_id: { type: mongoose.Schema.ObjectId, required: true },
   isSold: { type: Boolean, required: true },
 });
 const Product = mongoose.model("Product", ProductSchema);

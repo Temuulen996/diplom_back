@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const SessionSchema = mongoose.Schema(
   {
     token: { type: String, required: true },
-    userID: { type: mongoose.Schema.ObjectId, required: true },
+    user_id: { type: mongoose.Schema.ObjectId, required: true },
   },
   { timestamps: true }
 );

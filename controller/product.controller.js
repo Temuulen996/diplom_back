@@ -27,7 +27,7 @@ exports.findByOwnerId = asyncHandler(async (req, res, next) => {
   const ownewId = req.params.id;
   const ownerData = await User.findById(ownewId);
   console.log(ownerData);
-  let data = await Product.find({ owner: ownewId });
+  let data = await Product.find({ user_id: ownewId });
   // data = { ...data, owner_name: ownerData.fname };
 
   res.status(200).send({ success: true, data: data });
