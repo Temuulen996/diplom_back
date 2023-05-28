@@ -10,6 +10,11 @@ exports.findByID = asyncHandler(async (req, res, next) => {
   const data = await Wishlist.findById(id);
   res.status(200).send({ success: true, data: data });
 });
+exports.createWishlist = asyncHandler(async (req, res, next) => {
+  const newData = req.body;
+  await Wishlist.create(newData);
+  res.status(200).send({ success: true });
+});
 exports.findByProductID = asyncHandler(async (req, res, next) => {
   const id = req.params.id;
   const data = await Wishlist.find({ product_id: id });
