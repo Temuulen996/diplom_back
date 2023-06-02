@@ -27,6 +27,7 @@ const UserRoute = require("./routes/user.routes");
 const SessionRoute = require("./routes/session.routes");
 const WishlistRoute = require("./routes/wishlist.routes");
 const DonationRoute = require("./routes/donation.routes");
+const LogRoute = require("./routes/log.routes");
 //Routes
 //middleware
 app.use("/api/donation", DonationRoute);
@@ -34,6 +35,7 @@ app.use("/api/product", ProductRoute);
 app.use("/api/user", UserRoute);
 app.use("/api/session", SessionRoute);
 app.use("/api/wishlist", WishlistRoute);
+app.use("/api/log", LogRoute);
 //middleware
 
 app.get("/", async (req, res, next) => {
